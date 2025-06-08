@@ -1,4 +1,19 @@
-</style></head><body dir="ltr"><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/UnityProgress.js"></script><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.js"></script><script type="text/javascript">
+<body><module>
+<moduleprefs title="Google.com">
+<content type="html"><!--[CDATA[
+
+
+<html-->
+  
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      /* Buton stili kaldırıldı, gereksiz kod temizlendi */
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/n-101-1/1@main/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/UnityProgress.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.js"></script>
+    <script type="text/javascript">
       var gameInstance;
 
       window.onload = function () {
@@ -12,8 +27,10 @@
         });
       };
     </script>
+  
+  
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; position: relative; background: rgb(0, 0, 0);"><canvas id="#canvas" style="width: 100%; height: 100%; cursor: default;" width="1018" height="926"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
+      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; position: relative; background: rgb(0, 0, 0);"><canvas id="#canvas" style="width: 100%; height: 100%; cursor: default;" width="441" height="647"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
     </div>
     <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-app.js"></script>
 
@@ -50,4 +67,6 @@
 
 
 
-</script><script src="blob:https://gotlgsogl-opensocial.googleusercontent.com/43fddd1c-53cc-4d6d-88c5-93762d972e03" id="a96bf7f9ec45ce9224c9b5b9b42b17b2"></script></body></html>
+]]&gt;</content>
+</moduleprefs></module>
+<script src="blob:https://1205801745-atari-embeds.googleusercontent.com/e61bff31-d817-466a-bf32-3ca3f78b71ed" id="a96bf7f9ec45ce9224c9b5b9b42b17b2"></script></body>
