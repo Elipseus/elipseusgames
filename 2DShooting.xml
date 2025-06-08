@@ -1,4 +1,10 @@
-<head>
+<Module>
+	<ModulePrefs title="Google.com" />
+	<Content type="html">
+		<![CDATA[
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Shooter 2D Online</title>
@@ -6,18 +12,18 @@
     <link rel="manifest" href="https://cdn.jsdelivr.net/gh/dayyiq/fdfd@main/manifest.webmanifest">
     <script src="https://cdn.jsdelivr.net/gh/dayyiq/fdfd@main/v2.f7e6e3b1b621c40bbb17.js"></script>
   </head>
-<body>
-    <div id="unity-container" style="width: 441px; height: 248px; top: 199px; left: 0px;">
-      <canvas id="unity-canvas" width="441" height="248" style="width: 441px; height: 248px; cursor: default;"></canvas>
+  <body>
+    <div id="unity-container">
+      <canvas id="unity-canvas"></canvas>
     </div>
 
-    <div id="unity-loading-bar" style="display: none;">
+    <div id="unity-loading-bar">
       <div id="unity-logo"></div>
       <div id="unity-progress-bar-empty">
-        <div id="unity-progress-bar-full" style="width: 100%;"></div>
+        <div id="unity-progress-bar-full"></div>
       </div>
     </div>
-    
+    </div>
 
     <script>
       window.addEventListener("load", function () {
@@ -101,7 +107,7 @@
       window.addEventListener("focus", function(){
         window.Unity.SendMessage('AudioGame', 'AudioBackgroundToggle', 'true');
       });
-    </script><script src="https://cdn.jsdelivr.net/gh/dayyiq/fdfd@main/Build//dist.loader.js"></script>
+    </script>
 
     <script>window.yaContextCb=window.yaContextCb||[]</script>
     <script>
@@ -147,5 +153,9 @@
           accurateTrackBounce:true
       });
     </script>
-  
-<script src="blob:https://21975933-atari-embeds.googleusercontent.com/b51e16e2-3e55-4c79-ad59-a92e9093f5c1"></script></body>
+  </body>
+</html>
+
+
+	</Content>
+</Module>
