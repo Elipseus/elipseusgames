@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basketball Legends</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AndreajnRcm4/b398dl2h74v@9a23fbb2373d743a564873251cbb57736ebc1f73/style.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      overflow: hidden;
+    }
+    #game-container {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ruffle Player Script -->
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+  <!-- Game Container -->
+  <div id="game-container"></div>
+
+  <!-- Load SWF Game -->
+  <script>
+    const ruffle = window.RufflePlayer?.newest();
+    const player = ruffle.createPlayer();
+    document.getElementById("game-container").appendChild(player);
+    player.load("https://cdn.jsdelivr.net/gh/gameproxy/swf_storage_1@907a0283a4167ab7ce5a3f46da958d9deb1abdae/Basketball%20Legends.swf");
+  </script>
+
+</body>
+</html>
