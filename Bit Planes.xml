@@ -10,9 +10,7 @@
 <body>
 <main>
     <section class="welcome">
-<!--        <div class="ribbon right green">-->
-<!--            <a href="https://github.com/antonmedv/bit-planes" tabindex="-1">Fork me on GitHub</a>-->
-<!--        </div>-->
+
         <h1>
             <i class="logo"></i>
             Bit Planes
