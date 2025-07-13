@@ -1283,7 +1283,7 @@
                     let b = a.u("font");
                     a.clear(0);
                     0 == this.g ? (t(a, b, "A GAME BY", a.width / 2, a.height / 2 - 10, 0, 0, 1),
-                    t(a, b, "JANI NYK@NEN", a.width / 2, a.height / 2 + 2, 0, 0, 1)) : t(a, b, "MADE FOR JS13K", a.width / 2, a.height / 2 - 4, 0, 0, 1)
+                    t(a, b, "P.Diddy", a.width / 2, a.height / 2 + 2, 0, 0, 1)) : t(a, b, "MADE FOR UNCLE BEN FROM SPIDERMAN", a.width / 2, a.height / 2 - 4, 0, 0, 1)
                 }
             }
             ;class Ha {
