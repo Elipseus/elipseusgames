@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>1v1.LOL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MENBM6GSNY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MENBM6GSNY');
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://googleusercontent.b-cdn.net/one/css/style.css">
+
+  <!-- Core JS -->
+  <script src="https://googleusercontent.b-cdn.net/one/js/jquery.min.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/372_49986_1v1.js" async></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/IronSourceRV.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/mobileRedirect.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/fullscreen.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/ima3.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/cpmstar.js"></script>
+
+  <!-- Unity Loader -->
+  <script src="https://googleusercontent.b-cdn.net/one/js/UnityLoader.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://googleusercontent.b-cdn.net/one/js/firebase-app.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/firebase-analytics.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/firebase-auth.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/firebase-firestore.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/firebase-remote-config.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/firebase.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/login.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/firebase-config.js"></script>
+
+  <!-- Extra JS -->
+  <script src="https://googleusercontent.b-cdn.net/one/js/windowResize.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/adblockManager.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/macUserAgent.js"></script>
+  <script src="https://googleusercontent.b-cdn.net/one/js/visibilityChangeListener.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/st39/sdk@main/api.js"></script>
+</head>
+
+<body>
+  <!-- Ads -->
+  <div class="ads">
+    <div class="ad-smallscreen">
+      <div class="ad ad-rectangle-bottom"></div>
+    </div>
+    <div class="ad ad-rectangle-upper" id="adRectangleUpper"></div>
+    <div class="ad-largescreen">
+      <div class="ad ad-leaderboard-bottom"></div>
+    </div>
+  </div>
+
+  <!-- Game Container -->
+  <div id="gameContainer"></div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <img class="logo" src="https://googleusercontent.b-cdn.net/one/images/logo.png" />
+    <div class="spinner"></div>
+    <div class="progress"><div class="full"></div></div>
+  </div>
+
+  <!-- Main JS -->
+  <script>
+    var gameLoaded = false;
+    var lockedOccured = false;
+    var gameJsonUrl = "https://googleusercontent.b-cdn.net/one/WebGL.json";
+
+    // Unity Progress
+    function UnityProgress(gameInstance, progress) {
+      if (!gameInstance.Module) return;
+      const loader = document.querySelector("#loader");
+      if (!gameInstance.progress) {
+        const progressEl = loader.querySelector(".progress .full");
+        gameInstance.progress = progressEl;
+        loader.querySelector(".spinner").style.display = "none";
+      }
+      gameInstance.progress.style.transform = `scaleX(${progress})`;
+      if (progress === 1) {
+        loader.style.display = "none";
+        gameLoaded = true;
+      }
+    }
+
+    var gameInstance = UnityLoader.instantiate("gameContainer", gameJsonUrl, { onProgress: UnityProgress });
+    window.unityInstance = gameInstance;
+
+    // Prevent leaving page
+    window.addEventListener("beforeunload", function(e) {
+      if (!gameLoaded || !lockedOccured) return null;
+      var confirmationMessage = "Are you sure you want to leave?";
+      (e || window.event).returnValue = confirmationMessage;
+      return confirmationMessage;
+    });
+
+    // Pointer lock handling
+    document.addEventListener("pointerlockchange", function() {
+      if (!lockedOccured && document.pointerLockElement) lockedOccured = true;
+      if (!document.pointerLockElement && lockedOccured) {
+        lockedOccured = false;
+        gameInstance.SendMessage("Pause Menu", "OnCursorUnlocked");
+      }
+    });
+
+    document.addEventListener("mozpointerlockchange", function() {
+      if (!lockedOccured && document.pointerLockElement) lockedOccured = true;
+      if (!document.pointerLockElement && lockedOccured) {
+        lockedOccured = false;
+        gameInstance.SendMessage("Pause Menu", "OnCursorUnlocked");
+      }
+    });
+
+    // Keyboard blocking
+    document.onkeydown = function (e) {
+      if (e.altKey || e.ctrlKey || ["F1","F2","F3","F4"].includes(e.key)) e.preventDefault();
+    };
+    document.onmouseup = function(e) { e.preventDefault(); };
+  </script>
+</body>
+</html>
