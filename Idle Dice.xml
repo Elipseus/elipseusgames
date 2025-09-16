@@ -1,0 +1,9 @@
+<iframe 
+  id="game-iframe"
+  src="https://idle-dice.game-files.crazygames.com/idle-dice/20/index.html?isNewUser=false"
+  title="Idle Dice"
+  allow="accelerometer; gyroscope; autoplay; payment; fullscreen; microphone; clipboard-read; clipboard-write"
+  sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-same-origin allow-downloads allow-popups-to-escape-sandbox"
+  style="width:100%; height:100%; border:0; background:#fff; outline:0;"
+  allowfullscreen>
+</iframe>
