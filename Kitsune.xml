@@ -1,0 +1,9 @@
+<iframe 
+  id="gameFrame"
+  src="https://www.google.com/logos/2020/kitsune/rc6/kitsune20.html?hl=en"
+  title="Game"
+  allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write"
+  sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads"
+  style="width:100%; height:100%; border:0;"
+  allowfullscreen>
+</iframe>
